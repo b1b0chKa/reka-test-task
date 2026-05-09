@@ -34,6 +34,8 @@ class ApiTokenMiddleware
 
         $request->attributes->set('auth_user', $user);
 
+        auth()->login($user);
+
         return $next($request);
     }
 }
