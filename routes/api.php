@@ -9,9 +9,9 @@ Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 
 Route::middleware('auth.api')->group(function () {
+	Route::patch('/tasks/sort', [TaskController::class, 'sort']);
 	Route::apiResource('tasks', TaskController::class);
 
 	Route::get('/tags', [TagController::class, 'index']);
 	Route::post('/tags', [TagController::class, 'store']);
-	Route::patch('/tasks/sort', [TaskController::class, 'sort']);
 });

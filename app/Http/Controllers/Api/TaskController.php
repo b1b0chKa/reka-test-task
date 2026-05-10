@@ -29,7 +29,7 @@ class TaskController extends Controller
             ->paginate(10);
 
         return response()->json([
-            'data' => new TaskResource($tasks),
+            'data' => TaskResource::collection($tasks->items()),
             'meta' => [
                 'current_page'  => $tasks->currentPage(),
                 'last_page'     => $tasks->lastPage(),
