@@ -1,3 +1,131 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #222;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background: #222;
+    padding: 15px 0;
+    margin-bottom: 30px;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.logout-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.title {
+    margin-bottom: 20px;
+}
+
+input,
+textarea,
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: #222;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.error-box {
+    background: #dc3545;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.success-box {
+    background: #198754;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag-item {
+    background: #eeeeee;
+    border-radius: 20px;
+    padding: 10px 16px;
+    font-size: 14px;
+}
+
+.task-card {
+    padding: 12px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    background: white;
+    cursor: grab;
+}
+
+.task-card.dragging {
+    opacity: 0.5;
+    cursor: grabbing;
+}
