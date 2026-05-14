@@ -27,8 +27,8 @@ class UpdateTaskRequest extends FormRequest
             'text'          => ['sometimes', 'nullable', 'string', 'max:200'],
             'is_completed'  => ['sometimes', 'boolean'],
             'tags'          => ['sometimes', 'array'],
-            'tags.*' => ['integer',Rule::exists('tags', 'id')
-                    ->where('user_id', auth()->id()),
+            'tags.*' => ['integer', Rule::exists('tags', 'id')
+                    ->where('user_id', $this->user()->id),
             ],
         ];
     }
