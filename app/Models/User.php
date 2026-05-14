@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Models\Tag;
+use App\Models\Task;
 
 class User extends Authenticatable
 {
@@ -57,6 +59,6 @@ class User extends Authenticatable
 
     public function tags(): HasMany
     {
-        return $this->hasMany(Task::class);
+        return $this->hasMany(Tag::class);
     }
 }
